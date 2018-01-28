@@ -43,7 +43,7 @@ public class Counter3 extends Applet implements Runnable {
     class StartL implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             if(selfThread == null) {
-                selfThread = new Thread(Counter3.this);
+                selfThread = new Thread(Counter3.this); //调用外部类当前实例
                 selfThread.start();
             }
         }
@@ -61,6 +61,7 @@ public class Counter3 extends Applet implements Runnable {
             } catch (InterruptedException e){}
             if(runFlag)
                 t.setText(Integer.toString(count++));
+                System.out.println(count);
         }
     }
 
