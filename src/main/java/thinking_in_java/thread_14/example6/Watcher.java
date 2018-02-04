@@ -1,7 +1,9 @@
 package thinking_in_java.thread_14.example6;
 
 /**
- * <p>Description: </p>
+ * <p>Description:
+ * 观察计数器的值是否相等
+ * </p>
  *
  * @author kly
  * @Date 2018/1/28 16:19
