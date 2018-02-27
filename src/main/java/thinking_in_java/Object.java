@@ -38,7 +38,7 @@ public class Object {
         int i= 8;
         System.out.println(Integer.toBinaryString(-8));
         System.out.println(i << 2);
-        System.out.println(i >> 6);
+        System.out.println(i >> 2);
 
         System.out.println("进制----------------------------------------");
         int a  = 01247;
