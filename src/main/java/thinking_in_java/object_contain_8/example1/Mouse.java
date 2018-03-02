@@ -10,7 +10,7 @@ package thinking_in_java.object_contain_8.example1;
  */
 public class Mouse {
     private int mouseNumber;
-    Mouse(int i) {
+    public Mouse(int i) {
         mouseNumber = i;
     }
     // Magic method:

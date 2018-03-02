@@ -23,9 +23,9 @@ public class SpringDetector {
             ht.put(new Groundhog(i),new Prediction());
         }
         System.out.println("ht = " + ht + "\n");
-        System.out.println(
-                "Looking up prediction for groundhog #3:");
         Groundhog gh = new Groundhog(3);
+        System.out.println(
+                "Looking up prediction for groundhog #3:"+gh);
         if(ht.containsKey(gh)) { //检索不存在
             System.out.println((Prediction)ht.get(gh));
         }

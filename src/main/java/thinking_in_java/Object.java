@@ -1,5 +1,7 @@
 package thinking_in_java;
 
+import java.util.Properties;
+
 public class Object {
     public static int num; //类变量（静态变量）
     public double d; //实例变量
@@ -37,11 +39,16 @@ public class Object {
         System.out.println("移位运算符----------------------------------");
         int i= 8;
         System.out.println(Integer.toBinaryString(-8));
-        System.out.println(i << 2);
-        System.out.println(i >> 2);
+        System.out.println(i << 2); //i* 2^2
+        System.out.println(i >> 2); // i* 2^-2
 
         System.out.println("进制----------------------------------------");
         int a  = 01247;
         System.out.println(a);
+
+
+        System.out.println("获取系统属性");
+        Properties property = System.getProperties();
+        property.list(System.out);
     }
 }
