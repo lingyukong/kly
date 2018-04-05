@@ -45,7 +45,7 @@ public class TwoCounter extends Thread {
             t1.setText(Integer.toString(count1++));
             t2.setText(Integer.toString(count2++));
             try {
-                sleep(1000);
+                sleep(100);
             } catch (InterruptedException e){}
         }
     }

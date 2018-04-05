@@ -30,7 +30,12 @@ public class Counter1 extends Applet{
         onOff.addActionListener(new OnOffL());
         add(onOff);
     }
-    public void go() { //程序会进入该方法一直在执行，导致外部点击Toggle方法无法响应事件
+
+    /**
+     *  程序会进入该方法一直在执行，导致外部点击Toggle方法无法响应事件
+     *  因为go方法会进入无限循环，单线程，程序不会在对其他任何事件进行控制
+     */
+    public void go() {
         while (true) {
             try {
                 Thread.currentThread().sleep(100);
@@ -48,6 +53,8 @@ public class Counter1 extends Applet{
     }
     class OnOffL implements ActionListener {
         public void actionPerformed(ActionEvent e) {
+
+            System.out.println( "OnOffL");
             runFlag = !runFlag;
         }
     }

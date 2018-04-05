@@ -10,6 +10,7 @@ import java.awt.event.WindowEvent;
 /**
  * <p>Description:
  * 相比较于Counter2优化了代码
+ * 用内部类改变代码，可以显著改善代码的“可读性”和执行效率
  * </p>
  *
  * @author kly

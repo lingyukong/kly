@@ -29,6 +29,9 @@ public class Counter2 extends Applet {
     }
 
 
+    /**
+     * 启动一个线程SeparateSubTask，让主程序得以继续
+     */
     class StartL implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             if(sp == null)
