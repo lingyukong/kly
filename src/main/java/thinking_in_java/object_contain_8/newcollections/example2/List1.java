@@ -204,7 +204,7 @@ public class List1 {
     public static void main(String args[]) {
         // Make and fill a new list each time:
 //        basicTest(fill(new LinkedList()));
-//        basicTest(fill(new ArrayList()));
+        basicTest(fill(new ArrayList()));
 //        iterMotion(fill(new LinkedList()) ,"LinkedList");
 //        iterMotion(fill(new ArrayList()),"ArrayList");
         iterManipulation(fill(new LinkedList()));
