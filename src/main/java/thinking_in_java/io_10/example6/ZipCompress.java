@@ -61,6 +61,7 @@ public class ZipCompress {
 
             /**
              * 另一种方式读取压缩文件并解压成文件
+             * 使用ZipFile的性能优于 ZipInputStream
              *  一定要记得关闭流啊
              */
             ZipFile zipfiles  = new ZipFile("test.zip");
@@ -73,10 +74,11 @@ public class ZipCompress {
                 PrintWriter pw = new PrintWriter(wr);
                 String line ;
                 while ((line = br.readLine()) != null) {
-//                    pw.println(line);
+//                    pw.println(line); //建议打印直接用这个方式，已经格式化好了
                     pw.write(line+ "\r\n"); //如果用write需要加上回车和换行，默认只打印一行
                 }
                 br.close();
+                pw.flush();
                 pw.close();
             }
 
