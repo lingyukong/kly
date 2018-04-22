@@ -22,13 +22,13 @@ public class IOStreamDemo {
              * 创建一个FileInputStream同文件相连
              */
              // 1. Buffered input file
-//            DataInputStream in =
-//                    new DataInputStream(new BufferedInputStream(new FileInputStream(args[0])));
-//            String s, s2 = new String();
-//            while((s = in.readLine())!= null){
-//                s2 += s + "\n";
-//            }
-//            in.close();
+            DataInputStream in =
+                    new DataInputStream(new BufferedInputStream(new FileInputStream(args[0])));
+            String s, s2 = new String();
+            while((s = in.readLine())!= null){
+                s2 += s + "\n";
+            }
+            in.close();
 
 
             /**
