@@ -18,6 +18,7 @@ public class EncryptionDecorator extends DataSourceDecorator {
 
     @Override
     public void writeData(String data) {
+        System.out.println("EncryptionDecorator writeData");
         super.writeData(encode(data));
     }
 
@@ -30,8 +31,7 @@ public class EncryptionDecorator extends DataSourceDecorator {
     public String encode(String data) {
         byte[] result = data.getBytes();
         for(int i=0;i<result.length;i++) {
-            result[i] += (byte)1;
-
+            result[i] += (byte)1; //encode的算法是将字节往后挪了一位
         }
         /**
          *  Base64并不是一种用于安全领域的加密解密算法
@@ -44,11 +44,14 @@ public class EncryptionDecorator extends DataSourceDecorator {
     }
 
     public String decode(String data) {
+        System.out.println("EncryptionDecorator decode");
         byte[] result = Base64.getDecoder().decode(data);
         for (int i=0;i<result.length;i++) {
             result[i] -= (byte)1;
         }
-        return new String(result);
+        String res = new String(result);
+        System.out.println("decode result=" + res);
+        return res;
     }
 
 }

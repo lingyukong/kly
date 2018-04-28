@@ -23,4 +23,8 @@ public class DataSourceDecorator implements  DataSource{
     public String readData() {
         return wrapper.readData();
     }
+
+    public void test() {
+        System.out.println("test");
+    }
 }
