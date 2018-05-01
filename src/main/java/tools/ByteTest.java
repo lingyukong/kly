@@ -10,7 +10,16 @@ package tools;
  */
 public class ByteTest {
     public static void main(String[] args) {
-        byte[] result = "eJzzS8xN1QlOzEksquTyys/IUwjOzSzJ0DE0AAGu4JLUstQ8Ba/8pGIdS0MjoBAAfpEOqg==".getBytes();
+        //获取Unicode编码：
+        char c = '人';
+        String unicode = Integer.toHexString(c);//自动类型转换由低->高
+        System.out.println(unicode);
+
+
+        /**
+         * 根据UTF-8编码解释成字节
+         */
+        byte[] result = "人".getBytes();
         System.out.println(new String(result));
         for(int i=0;i<result.length;i++) {
             System.out.println(result[i]);
