@@ -14,8 +14,8 @@ import java.io.PipedOutputStream;
  */
 public class PipeExample {
     public static void main(String[] args) throws IOException {
-        PipedOutputStream pot = new PipedOutputStream();//创建尚未连接到管道输入流的管道输出流
-        PipedInputStream pis = new PipedInputStream(pot);//创建PipedInputStream，使其连接到管道输出流 src。
+        final PipedOutputStream pot = new PipedOutputStream();//创建尚未连接到管道输入流的管道输出流
+        final PipedInputStream pis = new PipedInputStream(pot);//创建PipedInputStream，使其连接到管道输出流 src。
 
 
         Thread t1 = new Thread(new Runnable() {
